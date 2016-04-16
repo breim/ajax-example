@@ -1,2 +1,12 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+
+
+Carregamento de páginas
+
+
+<% @pages.each do |page| %>
+	<br/> Carregar o valor de <%= link_to page.id, page_path(page.id), remote: true %>
+<% end %>
+
+<br/>
+O valor é: 
+<div id="value"></div>
